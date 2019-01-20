@@ -37,4 +37,3 @@
         => number % multipleOf == 0;
     }
 }
-
