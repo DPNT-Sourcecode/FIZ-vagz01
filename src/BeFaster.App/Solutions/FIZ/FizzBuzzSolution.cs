@@ -1,4 +1,6 @@
-﻿namespace BeFaster.App.Solutions.FIZ
+﻿using System.Linq;
+
+namespace BeFaster.App.Solutions.FIZ
 {
     public static class FizzBuzzSolution
     {
@@ -11,15 +13,28 @@
             var contains5 = Contains(number, "5");
 
             var greaterThan10 = number > 10;
+            var chars = number.ToString().ToCharArray();
+            var allIdentical = chars.All(c => c.Equals(chars[0]));
 
             var fizz = "fizz";
             var buzz = "buzz";
+            var deluxe = "deluxe";
 
             if (multipleOf3 || contains3)
             {
                 if (multipleOf5 || contains5)
                 {
+                    if (greaterThan10 && allIdentical)
+                    {
+                        return $"{fizz} {buzz} {deluxe}";
+                    }
+
                     return $"{fizz} {buzz}";
+                }
+
+                if (greaterThan10 && allIdentical)
+                {
+                    return $"{fizz} {buzz} {deluxe}";
                 }
 
                 return fizz;
@@ -45,6 +60,7 @@
             => number.ToString().Contains(divisibleBy);
     }
 }
+
 
 
 
