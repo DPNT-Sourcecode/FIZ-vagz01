@@ -6,8 +6,10 @@
         {
             var multipleOf3 = IsMultiple(number, 3);
             var multipleOf5 = IsMultiple(number, 5);
+
             var fizz = "fizz";
             var buzz = "buzz";
+
             if (multipleOf3)
             {
                 if (multipleOf5)
@@ -35,3 +37,4 @@
         => number % multipleOf == 0;
     }
 }
+
