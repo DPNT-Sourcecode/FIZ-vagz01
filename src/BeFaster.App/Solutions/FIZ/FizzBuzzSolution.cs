@@ -65,8 +65,3 @@ namespace BeFaster.App.Solutions.FIZ
             => number.ToString().Contains(divisibleBy);
     }
 }
-
-
-
-
-
