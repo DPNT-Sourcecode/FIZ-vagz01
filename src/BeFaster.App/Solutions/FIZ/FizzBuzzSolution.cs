@@ -55,6 +55,11 @@ namespace BeFaster.App.Solutions.FIZ
                 return buzz;
             }
 
+            if (greaterThan10 && allIdentical)
+            {
+                return deluxe;
+            }
+
             return $"{number}";
         }
 
@@ -65,3 +70,4 @@ namespace BeFaster.App.Solutions.FIZ
             => number.ToString().Contains(divisibleBy);
     }
 }
+
