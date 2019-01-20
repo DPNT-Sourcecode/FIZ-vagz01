@@ -27,7 +27,8 @@ namespace BeFaster.App.Solutions.FIZ
             {
                 if (multipleOf5 || contains5)
                 {
-                    if (greaterThan10 && allIdentical)
+                    if ((multipleOf3 && contains3) 
+                        || (multipleOf5 && contains5))
                     {
                         if (isOdd)
                         {
@@ -40,7 +41,7 @@ namespace BeFaster.App.Solutions.FIZ
                     return $"{fizz} {buzz}";
                 }
 
-                if (greaterThan10 && allIdentical)
+                if (multipleOf3 && contains3)
                 {
                     if (isOdd)
                     {
@@ -60,7 +61,7 @@ namespace BeFaster.App.Solutions.FIZ
                     return $"{fizz} {buzz}";
                 }
 
-                if (greaterThan10 && allIdentical)
+                if (multipleOf5 && contains5)
                 {
                     if (isOdd)
                     {
@@ -93,3 +94,4 @@ namespace BeFaster.App.Solutions.FIZ
             => number.ToString().Contains(divisibleBy);
     }
 }
+
