@@ -16,9 +16,12 @@ namespace BeFaster.App.Solutions.FIZ
             var chars = number.ToString().ToCharArray();
             var allIdentical = chars.All(c => c.Equals(chars[0]));
 
+            var isOdd = number % 2 == 1;
+
             var fizz = "fizz";
             var buzz = "buzz";
             var deluxe = "deluxe";
+            var fake = "fake deluxe";
 
             if (multipleOf3 || contains3)
             {
@@ -26,6 +29,11 @@ namespace BeFaster.App.Solutions.FIZ
                 {
                     if (greaterThan10 && allIdentical)
                     {
+                        if (isOdd)
+                        {
+                            return $"{fizz} {buzz} {fake}";
+                        }
+
                         return $"{fizz} {buzz} {deluxe}";
                     }
 
@@ -34,6 +42,11 @@ namespace BeFaster.App.Solutions.FIZ
 
                 if (greaterThan10 && allIdentical)
                 {
+                    if (isOdd)
+                    {
+                        return $"{fizz} {fake}";
+                    }
+
                     return $"{fizz} {deluxe}";
                 }
 
@@ -49,6 +62,11 @@ namespace BeFaster.App.Solutions.FIZ
 
                 if (greaterThan10 && allIdentical)
                 {
+                    if (isOdd)
+                    {
+                        return $"{buzz} {fake}";
+                    }
+
                     return $"{buzz} {deluxe}";
                 }
 
@@ -57,6 +75,11 @@ namespace BeFaster.App.Solutions.FIZ
 
             if (greaterThan10 && allIdentical)
             {
+                if (isOdd)
+                {
+                    return fake;
+                }
+
                 return deluxe;
             }
 
@@ -70,4 +93,5 @@ namespace BeFaster.App.Solutions.FIZ
             => number.ToString().Contains(divisibleBy);
     }
 }
+
 
