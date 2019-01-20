@@ -10,6 +10,8 @@
             var contains3 = Contains(number, "3");
             var contains5 = Contains(number, "5");
 
+            var greaterThan10 = number > 10;
+
             var fizz = "fizz";
             var buzz = "buzz";
 
@@ -43,5 +45,6 @@
             => number.ToString().Contains(divisibleBy);
     }
 }
+
 
 
