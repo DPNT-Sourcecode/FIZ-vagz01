@@ -7,7 +7,10 @@ namespace BeFaster.App.Solutions.SUM
         public static int Sum(int x, int y)
         {
             if (!IsValidInput(x))
-                throw new ArgumentException("");
+                throw new ArgumentException("must be a positive integer between 0-100", "x");
+            if (!IsValidInput(y))
+                throw new ArgumentException("must be a positive integer between 0-100", "y");
+
             return x + y; 
         }
 
@@ -15,4 +18,5 @@ namespace BeFaster.App.Solutions.SUM
             => (val > 0 && val < 100);
     }
 }
+
 
