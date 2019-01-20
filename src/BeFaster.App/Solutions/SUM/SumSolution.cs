@@ -1,4 +1,4 @@
-﻿using BeFaster.Runner.Exceptions;
+﻿using System;
 
 namespace BeFaster.App.Solutions.SUM
 {
@@ -6,7 +6,13 @@ namespace BeFaster.App.Solutions.SUM
     {
         public static int Sum(int x, int y)
         {
-            throw new SolutionNotImplementedException();
+            if (!IsValidInput(x))
+                throw new ArgumentException("");
+            return x + y; 
         }
+
+        private static bool IsValidInput(int val)
+            => (val > 0 && val < 100);
     }
 }
+
