@@ -18,4 +18,3 @@ namespace BeFaster.App.Solutions.SUM
             => (val >= 0 && val <= 100);
     }
 }
-
