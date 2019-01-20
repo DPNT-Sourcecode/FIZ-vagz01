@@ -13,9 +13,9 @@
             var fizz = "fizz";
             var buzz = "buzz";
 
-            if (multipleOf3)
+            if (multipleOf3 || contains3)
             {
-                if (multipleOf5)
+                if (multipleOf5 || contains5)
                 {
                     return $"{fizz} {buzz}";
                 }
@@ -23,9 +23,9 @@
                 return fizz;
             }
 
-            if (multipleOf5)
+            if (multipleOf5 || contains5)
             {
-                if (multipleOf3)
+                if (multipleOf3 || contains3)
                 {
                     return $"{fizz} {buzz}";
                 }
@@ -43,4 +43,5 @@
             => number.ToString().Contains(divisibleBy);
     }
 }
+
 

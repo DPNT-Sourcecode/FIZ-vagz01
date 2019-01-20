@@ -13,9 +13,11 @@ namespace BeFaster.App.Tests.Solutions.FIZ_R1
         [TestCase(22, ExpectedResult =  "22")]
         [TestCase(1, ExpectedResult = "1")]
         [TestCase(9999, ExpectedResult = "fizz")]
+        [TestCase(53, ExpectedResult = "fizz buzz")]
         public string Fiz_R1(int number)
         {
             return FizzBuzzSolution.FizzBuzz(number);
         }
     }
 }
+
