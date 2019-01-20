@@ -12,9 +12,9 @@ namespace BeFaster.App.Solutions.FIZ
             var contains3 = Contains(number, "3");
             var contains5 = Contains(number, "5");
 
-            var greaterThan10 = number > 10;
-            var chars = number.ToString().ToCharArray();
-            var allIdentical = chars.All(c => c.Equals(chars[0]));
+            //var greaterThan10 = number > 10;
+            //var chars = number.ToString().ToCharArray();
+            //var allIdentical = chars.All(c => c.Equals(chars[0]));
 
             var isOdd = number % 2 == 1;
 
@@ -73,17 +73,6 @@ namespace BeFaster.App.Solutions.FIZ
 
                 return buzz;
             }
-
-            if (greaterThan10 && allIdentical)
-            {
-                if (isOdd)
-                {
-                    return fake;
-                }
-
-                return deluxe;
-            }
-
             return $"{number}";
         }
 
@@ -94,4 +83,5 @@ namespace BeFaster.App.Solutions.FIZ
             => number.ToString().Contains(divisibleBy);
     }
 }
+
 
