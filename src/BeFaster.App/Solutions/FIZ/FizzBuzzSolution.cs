@@ -6,7 +6,14 @@ namespace BeFaster.App.Solutions.FIZ
     {
         public static string FizzBuzz(int number)
         {
-            throw new SolutionNotImplementedException();
+            if (number % 3 == 0)
+            {
+
+            }
         }
+
+        private static bool IsMultiple(int number, int multipleOf)
+        { }
     }
 }
+
