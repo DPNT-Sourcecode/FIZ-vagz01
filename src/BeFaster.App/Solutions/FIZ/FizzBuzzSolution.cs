@@ -1,6 +1,4 @@
-﻿using BeFaster.Runner.Exceptions;
-
-namespace BeFaster.App.Solutions.FIZ
+﻿namespace BeFaster.App.Solutions.FIZ
 {
     public static class FizzBuzzSolution
     {
@@ -12,13 +10,28 @@ namespace BeFaster.App.Solutions.FIZ
             var buzz = "buzz";
             if (multipleOf3)
             {
-                return "Fizz";
+                if (multipleOf5)
+                {
+                    return $"{fizz} {buzz}";
+                }
+
+                return fizz;
             }
+
+            if (multipleOf5)
+            {
+                if (multipleOf3)
+                {
+                    return $"{fizz} {buzz}";
+                }
+
+                return buzz;
+            }
+
+            return $"{number}";
         }
 
         private static bool IsMultiple(int number, int multipleOf)
         => number % multipleOf == 0;
     }
 }
-
-
