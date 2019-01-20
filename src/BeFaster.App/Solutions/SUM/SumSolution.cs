@@ -15,6 +15,7 @@ namespace BeFaster.App.Solutions.SUM
         }
 
         private static bool IsValidInput(int val)
-            => (val > 0 && val < 100);
+            => (val >= 0 && val <= 100);
     }
 }
+
