@@ -1,5 +1,6 @@
 ﻿using BeFaster.App.Solutions.SUM;
 using NUnit.Framework;
+using System;
 
 namespace BeFaster.App.Tests.Solutions.SUM
 {
@@ -13,5 +14,13 @@ namespace BeFaster.App.Tests.Solutions.SUM
         {
             return SumSolution.Sum(x, y);
         }
+
+        [TestCase(0, 0)]
+        [TestCase(100, 100)]
+        public void ComputeSum_Throws(int x, int y)
+        {
+            Assert.That(() => SumSolution.Sum(x, y), Throws.TypeOf<ArgumentException>());
+        }
     }
 }
+
