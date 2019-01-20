@@ -34,7 +34,7 @@ namespace BeFaster.App.Solutions.FIZ
 
                 if (greaterThan10 && allIdentical)
                 {
-                    return $"{fizz} {buzz} {deluxe}";
+                    return $"{fizz} {deluxe}";
                 }
 
                 return fizz;
@@ -45,6 +45,11 @@ namespace BeFaster.App.Solutions.FIZ
                 if (multipleOf3 || contains3)
                 {
                     return $"{fizz} {buzz}";
+                }
+
+                if (greaterThan10 && allIdentical)
+                {
+                    return $"{buzz} {deluxe}";
                 }
 
                 return buzz;
@@ -60,6 +65,7 @@ namespace BeFaster.App.Solutions.FIZ
             => number.ToString().Contains(divisibleBy);
     }
 }
+
 
 
 
